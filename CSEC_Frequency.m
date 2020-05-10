@@ -21,7 +21,7 @@ data_t(:,j*record+1)=DATA(:,j*record+1);
 %main peak of the CIR
 window_l=8;   %  Window width to the left of the main peak     Choose according to CIR characteristics, 8 is the best value for Tx2_2G_Boiler dataset.
 window_r=8;   %  Window width to the right of the main peak
-[s,e]=mianpeak(h1,window_l,window_r);
+[s,e]=mainpeak(h1,window_l,window_r);
 
 for i=2:record
 h2=DATA(:,i+j*record);     % the CIR to be calibrated
